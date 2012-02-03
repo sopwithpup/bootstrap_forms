@@ -6,7 +6,7 @@ module BootstrapForms
       if object.errors.full_messages.any?
         content_tag(:div, :class => 'alert alert-error') do
           link_to('&times;'.html_safe, '#', {:class => 'close', :data => { :dismiss => "alert" }}) +
-          content_tag(:p, "<strong>Oh snap! You got an error!</strong> Fix the errors below and try again.".html_safe) +
+          content_tag(:p, "<strong>There is an error!</strong>".html_safe) +
           content_tag(:ul) do
             object.errors.full_messages.map do |message|
               content_tag(:li, message)
